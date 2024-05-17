@@ -1,11 +1,19 @@
 :root {
   --header-height: 40px;
-  --main-bg: rgb(33, 33, 33);
-  --dark-bg: rgb(17, 19, 17);
-  --main-text-color: rgb(255, 255, 255);
-  --second-text-color: rgb(153, 153, 153);
-  --main-font: "Inter", sans-serif;
-  --second-font: "Gotham Pro", sans-serif;
+
+  --color-ligth: rgb(255, 255, 255);
+  --color-main: rgb(33, 33, 33);
+  --color-second: rgb(17, 19, 17);
+  --color-acsent-light: rgb(33, 160, 56);
+  --color-acsent-dark: rgb(153, 153, 153);
+  --color-acsent-red:  rgb(221, 48, 55);
+  --text-color-main: rgb(255, 255, 255);
+  --text-color-second: rgb(153, 153, 153);
+  --text-color-acsent-light: rgb(33, 160, 56);
+  --text-color-acsent-dark: rgb(33, 33, 33);
+
+  --font-main: "Inter", sans-serif;
+  --font-second: "Gotham Pro", sans-serif;
 }
 
 body {
@@ -23,7 +31,7 @@ body {
   top: 0;
   margin: 0;
   padding: 2px 10px 2px 10px;
-  background: var(--dark-bg);
+  background: var(--color-second);
   z-index: 50;
 }
 
@@ -50,7 +58,7 @@ body {
   transition: transform 0.3s ease-in-out;
   height: 2px;
   width: 20px;
-  background: var(--main-text-color);
+  background: var(--text-color-main);
   border-radius: 2px;
   opacity: 1;
 }
@@ -101,8 +109,8 @@ body {
   transition: transform 0.3s ease-in-out;
   width: fit-content;
   height: 15px;
-  color: var(--main-text-color);
-  font-family: var(--main-font);
+  color: var(--text-color-main);
+  font-family: var(--font-main);
   font-size: 9px;
   font-weight: 700;
   line-height: 15px;
@@ -118,7 +126,7 @@ main {
   position: absolute;
   top: var(--header-height);
   z-index: 1;
-  background-color: var(--main-bg);
+  background-color: var(--color-main);
 }
 
 .offer {
@@ -135,6 +143,7 @@ main {
 
 .offer__slogan {
   margin-top: 271px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -142,12 +151,12 @@ main {
 }
 
 .offer__slogan--title {
-  width: 320px;
+  width: 100%;
   height: 72px;
   padding: 0;
   margin: 0 0 15px;
-  color: var(--main-text-color);
-  font-family: var(--main-font);
+  color: var(--text-color-main);
+  font-family: var(--font-main);
   font-size: 30px;
   font-weight: 700;
   line-height: 120%;
@@ -159,8 +168,8 @@ main {
 .offer__slogan--text {
   width: 320px;
   height: 22px;
-  color: var(--main-text-color);
-  font-family: var(--main-font);
+  color: var(--text-color-main);
+  font-family: var(--font-main);
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -175,8 +184,8 @@ main {
   height: 40px;
   border-radius: 30px;
   background: rgb(221, 48, 55);
-  color: var(--main-text-color);
-  font-family: var(--main-font);
+  color: var(--text-color-main);
+  font-family: var(--font-main);
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
@@ -190,5 +199,203 @@ main {
 }
 
 .about {
-  height: 552px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  color: var(--text-color-second);
+  margin-top: 45px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.about__content {
+  margin: 35px 0px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.content__container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container__infographics {
+  width: 80px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid rgb(182, 255, 186);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5),0px 0px 10px 0px rgb(182, 255, 186);
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--text-color-acsent-light);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.container__infographics:hover {
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.5),0px 0px 12px 0px rgb(182, 255, 186);
+}
+
+.container__text {
+  color: var(--text-color-main);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.departments {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;align-items: center;
+}
+
+.departments__title {
+  width: 100%;
+  color: var(--text-color-second);
+  margin-top: 45px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.departments__list{
+  display: flex;
+  margin-top: 35px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.departments__list-item {
+  height: 30px;
+  padding: 0 14.5px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 3px solid var(--color-acsent-dark);
+  border-radius: 5px;
+  color: var(--text-color-main);
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.departments__list-item--active {
+  background: var(--color-acsent-dark);
+  
+  color: var(--text-color-acsent-dark);
+}
+
+
+.departments__cards {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.departments__card {
+  width: 320px;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 3px solid rgb(153, 153, 153);
+  border-radius: 30px;
+}
+
+.card__info {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.info__icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--color-ligth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__text {
+  width: 190px;
+  color: var(--text-color-main);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.info__text--green {
+  color: var(--text-color-acsent-light);
+}
+
+.card__button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--color-acsent-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.departments__button {
+  width: 260px;
+  height: 40px; 
+  margin: 35px 0 45px;
+  border-radius: 30px;
+  background-color: var(--color-acsent-red);
+  color: var(--text-color-main);
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
 }
